@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { environment } from '../../environments/environment.development';
 declare var JitsiMeetExternalAPI: any;
 
 @Component({
@@ -8,7 +9,7 @@ declare var JitsiMeetExternalAPI: any;
 })
 export class JitsiComponent implements OnInit, AfterViewInit {
 
-  domain: string = 'meet.jit.si';
+  domain: string = environment.jitsiBaseDomain;
   room: any;
   options: any;
   api: any;
